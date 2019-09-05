@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebRTC: Still photo capture demo</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/image@0.2.1/dist/magentaimage.min.js"></script>
+  </head>
+  <body>
+    <div class="contentarea">
+      <div class="webcam-container">
+        <h2>
+          Webcam Style Transfer
+        </h2>
+        <p id="loaded-text">
+          model loading
+        </p>
+        <div class="camera">
+          <video id="video" playsinline="true">Video stream not available.</video>
+          <button id="startbutton">Take photo</button>
+        </div>
+        <canvas id="canvas"> </canvas>
+        <div class="output">
+          <img id="photo" alt="The screen capture will appear in this box." />
+        </div>
+      </div>
+      <div class="images-container">
+        <div class="left">
+          <div class="frame">
+            <h2>
+              Image To Be Stylized
+            </h2>
+            <img id="content" class="image" />
+          </div>
+
+          <div class="right">
+            <div class="frame">
+              <h2>
+                Style Image
+              </h2>
+              <img id="style" class="image" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="styled-image-container">
+        <h2 class="dark">
+          Stylized Image
+        </h2>
+        <canvas id="stylized" height="250px"></canvas>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
